@@ -3,7 +3,7 @@ import { SearchIcon } from '@heroicons/react/outline'
 
 function Header() {
   return (
-    <header className="flex items-center space-x-5 py-5 px-10 shadow-md">
+    <header className="sticky flex items-center space-x-5 py-5 px-10 shadow-md">
       <div className="">
         <svg
           className="w-20"
@@ -22,22 +22,30 @@ function Header() {
 
       <div className="flex-grow">
         <ul className="flex items-center space-x-5">
-          <li>
-            Discover <ChevronDownIcon className="inline w-4" />
+          <li className="hover:text-blue-400">
+            <a href="#">Discover</a> <ChevronDownIcon className="inline w-4" />
+          </li>
+          <li className="hover:text-blue-400">
+            <a href="#">Licensing</a> <ChevronDownIcon className="inline w-4" />
           </li>
           <li>
-            Licensing <ChevronDownIcon className="inline w-4" />
+            <a href="#">NFT Vault</a>{' '}
           </li>
-          <li>NFT Vault </li>
           <div className="hidden items-center space-x-5 lg:flex">
-            <li>Memberships</li>
-            <li>Quests</li>
-            <li>Blog</li>
+            <li>
+              <a href="#">Memberships</a>
+            </li>
+            <li>
+              <a href="#">Quests</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
           </div>
         </ul>
       </div>
 
-      <div className="">
+      <div className="#">
         <div className="flex items-center space-x-2 rounded-full bg-gray-100 p-2">
           <div>
             <SearchIcon className="w-6" />
@@ -51,10 +59,15 @@ function Header() {
       </div>
 
       <div className="flex items-center space-x-5">
-        <button className="font-semibold">Log in</button>
-        <button className="rounded-full border border-black py-1 px-3 font-semibold hover:text-blue-400">
+        <a href="#" className="font-semibold">
+          Log in
+        </a>
+        <a
+          href="#"
+          className="rounded-full border border-black py-1 px-3 font-semibold hover:text-blue-400"
+        >
           Sign up
-        </button>
+        </a>
       </div>
     </header>
   )
