@@ -4,7 +4,7 @@ import Logo from './Logo'
 
 function Header() {
   return (
-    <header className="sticky flex items-center space-x-5 py-5 px-12 shadow-md">
+    <header className="sticky top-0 z-50 flex items-center space-x-5 bg-white py-5 px-12 shadow-md">
       <Logo />
 
       <HeaderNav />
