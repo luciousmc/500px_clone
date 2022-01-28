@@ -1,9 +1,9 @@
-import { ChevronDownIcon } from '@heroicons/react/solid'
 import { SearchIcon } from '@heroicons/react/outline'
+import HeaderNav from './HeaderNav'
 
 function Header() {
   return (
-    <header className="sticky flex items-center space-x-5 py-5 px-10 shadow-md">
+    <header className="sticky flex items-center space-x-5 py-5 px-12 shadow-md">
       <div className="">
         <svg
           className="w-20"
@@ -20,42 +20,17 @@ function Header() {
         </svg>
       </div>
 
-      <div className="flex-grow">
-        <ul className="flex items-center space-x-5">
-          <li className="hover:text-blue-400">
-            <a href="#">Discover</a> <ChevronDownIcon className="inline w-4" />
-          </li>
-          <li className="hover:text-blue-400">
-            <a href="#">Licensing</a> <ChevronDownIcon className="inline w-4" />
-          </li>
-          <li>
-            <a href="#">NFT Vault</a>{' '}
-          </li>
-          <div className="hidden items-center space-x-5 lg:flex">
-            <li>
-              <a href="#">Memberships</a>
-            </li>
-            <li>
-              <a href="#">Quests</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </div>
-        </ul>
-      </div>
+      <HeaderNav />
 
-      <div className="#">
-        <div className="flex items-center space-x-2 rounded-full bg-gray-100 p-2">
-          <div>
-            <SearchIcon className="w-6" />
-          </div>
-          <input
-            className="bg-transparent font-thin text-gray-700 outline-none"
-            type="text"
-            placeholder="Search 500px"
-          />
+      <div className="flex items-center space-x-2 rounded-full bg-gray-100 p-2">
+        <div>
+          <SearchIcon className="w-6" />
         </div>
+        <input
+          className="bg-transparent font-thin text-gray-700 outline-none"
+          type="search"
+          placeholder="Search 500px"
+        />
       </div>
 
       <div className="flex items-center space-x-5">
@@ -64,7 +39,7 @@ function Header() {
         </a>
         <a
           href="#"
-          className="rounded-full border border-black py-1 px-3 font-semibold hover:text-blue-400"
+          className="rounded-full border-[3px] border-black py-1 px-3 font-semibold hover:text-blue-400"
         >
           Sign up
         </a>
