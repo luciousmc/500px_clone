@@ -1,6 +1,8 @@
+import { ChevronDownIcon } from '@heroicons/react/solid'
+import { SearchIcon } from '@heroicons/react/outline'
 function Header() {
   return (
-    <div>
+    <header className="">
       <div className="">
         <svg
           className="w-28"
@@ -18,20 +20,40 @@ function Header() {
       </div>
 
       <div>
-        <ul>
-          <li>Discover</li>
-          <li>Licensing</li>
-          <li>NFT Vault</li>
+        <ul className="flex items-center space-x-5">
+          <li>
+            Discover <ChevronDownIcon className="inline w-4" />
+          </li>
+          <li>
+            Licensing <ChevronDownIcon className="inline w-4" />
+          </li>
+          <li>NFT Vault </li>
           <li>Memberships</li>
           <li>Quests</li>
           <li>Blog</li>
         </ul>
       </div>
 
-      <div>
-        <input type="text" placeholder="Search" />
+      <div className="">
+        <div className="flex items-center space-x-2 rounded-full bg-gray-100 p-2">
+          <div>
+            <SearchIcon className="w-6" />
+          </div>
+          <input
+            className="bg-transparent font-thin text-gray-700"
+            type="text"
+            placeholder="Search 500px"
+          />
+        </div>
       </div>
-    </div>
+
+      <div className="flex items-center space-x-5">
+        <button className="font-semibold">Log in</button>
+        <button className="rounded-full border border-black py-1 px-3 font-semibold hover:text-blue-400">
+          Sign up
+        </button>
+      </div>
+    </header>
   )
 }
 
