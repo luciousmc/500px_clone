@@ -1,11 +1,12 @@
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { SearchIcon } from '@heroicons/react/outline'
+
 function Header() {
   return (
-    <header className="">
+    <header className="flex items-center space-x-5 py-5 px-10 shadow-md">
       <div className="">
         <svg
-          className="w-28"
+          className="w-20"
           id="logo_svg"
           data-name="Logo SVG"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +20,7 @@ function Header() {
         </svg>
       </div>
 
-      <div>
+      <div className="flex-grow">
         <ul className="flex items-center space-x-5">
           <li>
             Discover <ChevronDownIcon className="inline w-4" />
@@ -28,9 +29,11 @@ function Header() {
             Licensing <ChevronDownIcon className="inline w-4" />
           </li>
           <li>NFT Vault </li>
-          <li>Memberships</li>
-          <li>Quests</li>
-          <li>Blog</li>
+          <div className="hidden items-center space-x-5 lg:flex">
+            <li>Memberships</li>
+            <li>Quests</li>
+            <li>Blog</li>
+          </div>
         </ul>
       </div>
 
@@ -40,7 +43,7 @@ function Header() {
             <SearchIcon className="w-6" />
           </div>
           <input
-            className="bg-transparent font-thin text-gray-700"
+            className="bg-transparent font-thin text-gray-700 outline-none"
             type="text"
             placeholder="Search 500px"
           />
