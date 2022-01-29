@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router'
 
 interface LogoProps {
-  w?: number
-  h?: number
+  w?: string
+  h?: string
 }
 
-function Logo({ w = 20, h = 20 }: LogoProps) {
+function Logo({ w = '20', h = '20' }: LogoProps) {
   const router = useRouter()
 
   return (
     <div className="cursor-pointer" onClick={() => router.push('/')}>
       <svg
-        className={`w-${w} ${`h-${h}`}`}
+        className={`w-${w} h-${h}`}
         id="logo_svg"
         data-name="Logo SVG"
         xmlns="http://www.w3.org/2000/svg"
