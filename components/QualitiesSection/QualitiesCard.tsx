@@ -10,12 +10,12 @@ function QualitiesCard({
   cardDescription,
 }: QualitiesCardProps) {
   return (
-    <div>
+    <div className="w-64 md:w-80">
       <div>
-        <img src={imgSrc} alt={cardTitle} />
+        <img className="w-10" src={imgSrc} alt={cardTitle} />
       </div>
-      <h1>{cardTitle}</h1>
-      <p>{cardDescription}</p>
+      <h1 className="py-3 text-2xl font-bold">{cardTitle}</h1>
+      <p className=" text-sm">{cardDescription}</p>
     </div>
   )
 }
