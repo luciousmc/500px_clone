@@ -1,4 +1,4 @@
-interface QualitiesCardProps {
+type QualitiesCardProps = {
   cardTitle: string
   imgSrc: string
   cardDescription: string
